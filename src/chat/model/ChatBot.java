@@ -1,12 +1,17 @@
 package chat.model;
 
 public class ChatBot
-private void buildQuestions()		
-public String processConversation(String input)
 {
-	{	
+	private void buildQuestions()	
 	{
-	return null;
+		
+	}
+	public String processConversation(String input)
+	{	
+		
+	{
+		return null;
+
 	}	
 
 }
