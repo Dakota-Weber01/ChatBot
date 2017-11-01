@@ -26,7 +26,7 @@ public class MovieTest
 		testedMovie = null;
 	}
 
-	@Test
+	@Test 
 	public void testMovie()
 	{
 		assertNotNull("Movies need a default genre", testedMovie.getGenre());
