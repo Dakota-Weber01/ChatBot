@@ -1,6 +1,10 @@
 package chat.view;
 
-public class ChatFrame
+
+import chat.controller.ChatController;
+import javax.swing.JFrame;
+
+public class ChatFrame extends JFrame
 {
 
 }
