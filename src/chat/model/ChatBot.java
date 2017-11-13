@@ -1,5 +1,7 @@
 package chat.model;
 
+import java.util.ArrayList;
+
 public class ChatBot
 {
 	private void buildQuestions()	
@@ -23,6 +25,11 @@ public class ChatBot
 		}
 		return validLength;
 	}
+	public void GetShoppingList()
+	{
+		ArrayList Shoppinglist = new ArrayList();
+	}
+	
 	public boolean htmlTagChecker(String input)
 	{
 		return false;

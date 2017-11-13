@@ -21,3 +21,9 @@ public class PopupDisplay
 		return answer;
 	}
 }
+
+
+//	PopupDisplay test = new PopupDisplay();
+//test.displayText("words go here");
+//test.collectResponse("Ask a question.");
+//}
