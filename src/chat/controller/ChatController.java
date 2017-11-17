@@ -4,27 +4,44 @@ import chat.view.PopupDisplay;
 import chat.model.ChatBot;
 public class ChatController
 {
+{
+		ChatBot = new ChatBot(null);
+		}	
 public void start()	
 {
-	String response = display.collectResponse("What do you want to talk about?");
-	while (ChatBot.lengthChecker(response) && !ChatBot.quitChecker(response))
-	{
-		response = popupChat(response);
-		response = display.collectResponse(response);
-	}
+	display.displayText("Welcome to ChatBot");
 }
 private ChatBot ChatBot;
 private PopupDisplay display;
 private ChatFrame appFrame;
+public String interactWithChatBot(String input)
 	{
-		ChatBot = new ChatBot();
+		String chatbotSays = "";
+		if(ChatBot.quitChecker(input))
+		{
+			close();
+		}
+		ChatBot.processConversation(input);
+		return chatbotSays;
+		
+		
 	}
-	public String interactWithChatBot(String input)
-	private String popupChat(String chat)
+private void close()
+	{
+		display.displayText("Goodbye");	
+		System.exit(0);
+	}
+private String popupChat(String chat)
 	{
 		String ChatBotSays = "";
 		ChatBotSays += ChatBot.processConversation(chat);
 		return ChatBotSays;
 	}
-
+private String quitChecker;
+{
+	if(ChatBot.quitChecker(input))
+	userInput == "close";
+	close();
+	
+}
 }
