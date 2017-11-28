@@ -1,6 +1,7 @@
 package chat.view;
 import javax.swing.JPanel;
 import javax.swing.JButton;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 import javax.swing.SpringLayout;
 import javax.swing.JTextArea;
@@ -17,6 +18,7 @@ public class ChatPanel extends JPanel
 	private JTextField inputField;
 	private JTextArea chatArea;
 	private SpringLayout appLayout;
+	private JLabel infoLabel;
 	
 	/**
 	 * Declaring object names and variables 
@@ -32,7 +34,8 @@ public class ChatPanel extends JPanel
 		chatArea = new JTextArea(10,25);
 		inputField = new JTextField(20);
 		appLayout = new SpringLayout();
-	
+		infoLabel = new JLabel("Type to chat with the chatbot");
+		
 		setupPanel();
 		setupLayout();
 		setupListeners();
@@ -47,6 +50,7 @@ public class ChatPanel extends JPanel
 	this.add(chatButton);
 	this.add(inputField);
 	this.add(chatArea);
+	this.add(infoLabel);
 	chatArea.setEnabled(false);
 	chatArea.setEditable(false);
 	/** Setup Layout
@@ -62,6 +66,9 @@ public class ChatPanel extends JPanel
 		appLayout.putConstraint(SpringLayout.EAST, chatButton, 0, SpringLayout.EAST, chatArea);
 		appLayout.putConstraint(SpringLayout.NORTH, inputField, 45, SpringLayout.SOUTH, chatArea);
 		appLayout.putConstraint(SpringLayout.WEST, inputField, 0, SpringLayout.WEST, chatArea);
+		appLayout.putConstraint(SpringLayout.WEST, infoLabel, 0, SpringLayout.WEST, inputField);
+		appLayout.putConstraint(SpringLayout.SOUTH, infoLabel, 0, SpringLayout.NORTH, inputField);
+
 	/** Setup Listeners	
 	 *  A void which calls a method based on the users action
 	 */
